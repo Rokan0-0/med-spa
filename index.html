@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth bg-[#FAF8F5] text-[#1A1918]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B5986D' stroke-width='1.5'><path d='M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z'/></svg>" />
+    <title>AURA ATELIER — Porcelain Aesthetics, Cosmetic Dentistry &amp; Private Suites</title>
+    <meta name="description" content="A premier light-porcelain aesthetic medical sanctuary with dedicated clinic suites in Victoria Island, Lekki, Ikeja GRA, and Maitama, Abuja. Board-certified surgical cosmetic dentistry, Morpheus8, and tailored cellular wellness." />
+    
+    <!-- Google Fonts: Cormorant Garamond, Playfair Display, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS with Luminous Porcelain Tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              porcelain: {
+                25: '#FCFBFA',
+                50: '#FFFFFF',
+                100: '#FAF8F5', // Master Canvas
+                150: '#F5F1E9', // Warm Travertine Surface
+                200: '#EFE9DE', // Card Base
+                300: '#E4DDD0', // Hairline Border
+                400: '#CFC5B4',
+              },
+              ink: {
+                950: '#111215', // Primary Headlines
+                900: '#1A1B20',
+                800: '#2C2D35',
+                700: '#484642', // Body Text
+                500: '#75726B', // Muted Labels
+                400: '#9E9A91', // Subtle Metadata
+              },
+              bronze: {
+                300: '#D6C09F',
+                400: '#C5A880',
+                500: '#B5986D', // Polished Champagne Bronze
+                600: '#997C52',
+                700: '#7D643E',
+              },
+              sage: {
+                50: '#F2F8F5',
+                500: '#2E7D5C', // Clean Clinical Green
+                600: '#24664A',
+              }
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+              display: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            boxShadow: {
+              'porcelain-sm': '0 1px 3px 0 rgba(26, 27, 32, 0.04), 0 1px 2px -1px rgba(26, 27, 32, 0.02)',
+              'porcelain-card': '0 4px 20px -2px rgba(35, 30, 20, 0.05), 0 2px 6px -2px rgba(35, 30, 20, 0.02)',
+              'porcelain-hover': '0 12px 32px -4px rgba(35, 30, 20, 0.08), 0 4px 12px -2px rgba(35, 30, 20, 0.03)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Pure Luminous Porcelain Baseline */
+      body {
+        background-color: #FAF8F5;
+        color: #1A1918;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FAF8F5;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D9D2C5;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #B5986D;
+      }
+      ::selection {
+        background: #B5986D;
+        color: #FFFFFF;
+      }
+      
+      .porcelain-card {
+        background: #FFFFFF;
+        border: 1px solid #EAE3D6;
+        box-shadow: 0 4px 24px -2px rgba(30, 25, 15, 0.04);
+      }
+      .porcelain-card:hover {
+        border-color: #CFC5B4;
+        box-shadow: 0 12px 32px -4px rgba(30, 25, 15, 0.08);
+      }
+      .porcelain-hairline {
+        border-color: #E8E2D5;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FAF8F5] text-[#1A1918] font-sans antialiased selection:bg-bronze-500 selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
