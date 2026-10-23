@@ -105,15 +105,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               </a>
             </nav>
 
-            {/* Suite Selector & VIP CTA: strictly hidden on mobile/tablet, visible on desktop lg+ */}
-            <div className="hidden lg:flex items-center space-x-3 shrink-0">
+            {/* Suite Selector: desktop lg+ */}
+            <div className="hidden lg:flex items-center shrink-0">
               
               {/* Suite Switcher */}
               <div className="relative">
                 <button
                   type="button"
                   onClick={() => setSuiteDropdownOpen(!suiteDropdownOpen)}
-                  className="flex items-center space-x-2 text-xs text-[#2C2A26] bg-white hover:bg-[#F5F1E9] border border-[#EAE3D6] px-3 py-2 rounded-lg transition-all shadow-sm focus:outline-none whitespace-nowrap"
+                  className="flex items-center space-x-2 text-xs text-[#2C2A26] bg-white hover:bg-[#F5F1E9] border border-[#EAE3D6] px-3.5 py-2 rounded-lg transition-all shadow-sm focus:outline-none whitespace-nowrap"
                 >
                   <MapPin className="w-3.5 h-3.5 text-[#997C52] shrink-0" />
                   <span className="font-medium">{selectedSuite.neighborhood}</span>
@@ -149,28 +149,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                 )}
               </div>
 
-              {/* Consultation Booking Button */}
-              <button
-                type="button"
-                onClick={() => onOpenBooking()}
-                className="px-4 sm:px-5 py-2.5 rounded-lg bg-[#111215] hover:bg-[#2A2825] text-white font-medium text-xs uppercase tracking-wider transition-all duration-200 shadow-sm flex items-center space-x-2 whitespace-nowrap"
-              >
-                <MessageSquare className="w-3.5 h-3.5 text-[#E6D4B8]" />
-                <span>Reserve Consultation</span>
-              </button>
-
             </div>
 
-            {/* Mobile / Tablet Compact Action: strictly visible on < lg */}
-            <div className="flex lg:hidden items-center space-x-2 shrink-0">
-              <button
-                type="button"
-                onClick={() => onOpenBooking()}
-                className="px-3.5 py-2 text-xs font-medium rounded-lg bg-[#111215] hover:bg-[#2A2825] text-white uppercase tracking-wider transition-colors shadow-sm flex items-center space-x-1.5"
-              >
-                <MessageSquare className="w-3.5 h-3.5 text-[#E6D4B8]" />
-                <span>Reserve</span>
-              </button>
+            {/* Mobile / Tablet Menu Toggle */}
+            <div className="flex lg:hidden items-center shrink-0">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
