@@ -46,7 +46,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#111215] flex flex-col antialiased selection:bg-[#B5986D] selection:text-white">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#111215] flex flex-col antialiased selection:bg-[#B5986D] selection:text-white overflow-x-hidden w-full">
       
       {/* 1. Header Navigation */}
       <Navbar
@@ -57,7 +57,7 @@ export const App: React.FC = () => {
       />
 
       {/* Main Content */}
-      <main className="flex-grow">
+      <main className="flex-grow w-full overflow-x-hidden">
         {/* 2. Architectural Hero Section */}
         <Hero
           selectedSuite={selectedSuite}

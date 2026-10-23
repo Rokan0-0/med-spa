@@ -18,18 +18,45 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Minimalist Location Label */}
-        <div className="flex flex-wrap items-center justify-between text-xs text-[#6E6A63] pb-6 mb-10 border-b border-[#EAE3D6]">
-          <div className="flex items-center space-x-2.5">
-            <span className="w-2 h-2 rounded-full bg-[#2E7D5C]" />
-            <span className="text-[#111215] font-medium tracking-wide">Flagship Suite: {selectedSuite.name}</span>
-            <span className="text-[#C4BDB0]">&bull;</span>
-            <span className="text-[#6E6A63]">{selectedSuite.neighborhood}, {selectedSuite.city}</span>
+        <div className="pb-5 mb-8 sm:mb-10 border-b border-[#EAE3D6]">
+          {/* Mobile View (< sm): Clean, Balanced Dual Rows */}
+          <div className="sm:hidden space-y-2 text-xs">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <span className="w-2 h-2 rounded-full bg-[#2E7D5C] shrink-0" />
+                <span className="text-[#111215] font-medium tracking-wide">
+                  Flagship: {selectedSuite.neighborhood}
+                </span>
+                <span className="text-[#C4BDB0]">&bull;</span>
+                <span className="text-[#6E6A63]">{selectedSuite.city}</span>
+              </div>
+              <span className="text-[10px] font-mono uppercase tracking-wider text-[#997C52] font-semibold bg-[#FAF6EE] px-2 py-0.5 rounded border border-[#EAE3D6]">
+                Suite Open
+              </span>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] font-mono text-[#6E6A63] pt-0.5">
+              <span>Tier I – III Restorative Care</span>
+              <span className="text-[#997C52] font-semibold">₦80,000 – ₦1.5M+</span>
+            </div>
           </div>
 
-          <div className="hidden sm:flex items-center space-x-4 font-mono text-[11px] text-[#6E6A63]">
-            <span>Tier I to III Restorative Care</span>
-            <span className="text-[#C4BDB0]">&bull;</span>
-            <span className="text-[#997C52] font-semibold">From ₦80,000 to ₦1.5M+</span>
+          {/* Desktop & Tablet View (>= sm): Refined Single Ledger Line */}
+          <div className="hidden sm:flex items-center justify-between text-xs text-[#6E6A63]">
+            <div className="flex items-center space-x-2.5">
+              <span className="w-2 h-2 rounded-full bg-[#2E7D5C] shrink-0" />
+              <span className="text-[#111215] font-medium tracking-wide">
+                Flagship Suite: {selectedSuite.name}
+              </span>
+              <span className="text-[#C4BDB0]">&bull;</span>
+              <span className="text-[#6E6A63]">{selectedSuite.neighborhood}, {selectedSuite.city}</span>
+            </div>
+
+            <div className="flex items-center space-x-4 font-mono text-[11px] text-[#6E6A63]">
+              <span>Tier I to III Restorative Care</span>
+              <span className="text-[#C4BDB0]">&bull;</span>
+              <span className="text-[#997C52] font-semibold">From ₦80,000 to ₦1.5M+</span>
+            </div>
           </div>
         </div>
 

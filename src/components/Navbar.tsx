@@ -60,14 +60,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Main Porcelain Navigation */}
       <header
-        className={`sticky top-0 z-40 transition-all duration-200 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-200 overflow-x-clip ${
           isScrolled
             ? 'bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#EAE3D6] py-3 shadow-sm'
             : 'bg-[#FAF8F5] border-b border-[#EAE3D6] py-3.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4 lg:gap-8">
+          <div className="flex items-center justify-between gap-3 lg:gap-8">
             
             {/* Brand Identity: Architecturally Stacked Logomark */}
             <a href="#" className="flex flex-col shrink-0 group">
@@ -105,8 +105,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               </a>
             </nav>
 
-            {/* Suite Selector & VIP CTA */}
-            <div className="hidden sm:flex items-center space-x-3 shrink-0">
+            {/* Suite Selector & VIP CTA: strictly hidden on mobile/tablet, visible on desktop lg+ */}
+            <div className="hidden lg:flex items-center space-x-3 shrink-0">
               
               {/* Suite Switcher */}
               <div className="relative">
@@ -161,18 +161,21 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             </div>
 
-            {/* Mobile Menu Toggle */}
-            <div className="flex lg:hidden items-center space-x-2">
+            {/* Mobile / Tablet Compact Action: strictly visible on < lg */}
+            <div className="flex lg:hidden items-center space-x-2 shrink-0">
               <button
+                type="button"
                 onClick={() => onOpenBooking()}
-                className="px-3 py-2 text-xs font-medium rounded-lg bg-[#111215] text-white uppercase tracking-wider"
+                className="px-3.5 py-2 text-xs font-medium rounded-lg bg-[#111215] hover:bg-[#2A2825] text-white uppercase tracking-wider transition-colors shadow-sm flex items-center space-x-1.5"
               >
-                Reserve
+                <MessageSquare className="w-3.5 h-3.5 text-[#E6D4B8]" />
+                <span>Reserve</span>
               </button>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-[#2C2A26] p-2 focus:outline-none"
+                className="text-[#111215] p-2 hover:bg-[#F5F1E9] rounded-lg transition-colors focus:outline-none"
+                aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
